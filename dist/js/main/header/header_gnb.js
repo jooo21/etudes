@@ -3,15 +3,10 @@ $(document).ready(function(){
     var $gnb_li = $("#gnb>li");
     var $sub = $gnb_li.children(".sub");
     var speed =300;
-    var isDone =true;
 
     //gnb_multi
     $gnb_li.on("mouseenter focusin",function(){
-        if(isDone){
-            isDone=false;
-            openSub(this);
-        }
-        
+        openSub(this);
     });
 
     $gnb_li.on("mouseleave focusout",function(){
@@ -25,26 +20,25 @@ $(document).ready(function(){
         var isBgGnb = $(".bgGnb").length;
         var isMedia = $(el).children(".sub").find("a").eq(0).text();
         if(isMedia =="Log in") {
-            $(el).children(".sub").find("video").get(0).play();
+            $(el).children(".sub").find("video").get(0).load();
         }
         if(!isBgGnb) {     
             $header.prepend(
                 $("<div class='bgGnb'>")
                     .css({
                         width:"100%", height:ht, backgroundColor:bg, 
-                        position:"absolute", left:0, top:posY, display:"none",overflow:"hidden", borderBottom:"1px solid #e9e4dc",zIndex:2
+                        position:"absolute", left:0, top:posY, display:"none",overflow:"hidden", borderBottom:"1px solid #e9e4dc"
                     })
             )
         }
         // console.log(getMax());
         $(el).children(".sub").stop().show();
         $(".bgGnb").stop().show();
-        isDone = true;
     }
 
     function closeSub(el){
         var isMedia = $(el).children(".sub").find("a").eq(0).text();
-        if(isMedia =="Log in") {
+        if(!isMedia =="Log in") {
             $(el).children(".sub").find("video").get(0).pause();
         }
 
@@ -60,8 +54,5 @@ $(document).ready(function(){
 
         $(this).toggleClass("on");
         $moGnb.toggleClass("on");
-
-        
-
     }) 
 });

@@ -21,7 +21,7 @@ $(document).ready(function(){
         var isBgGnb = $(".bgGnb").length;
         var isMedia = $(el).children(".sub").find("a").eq(0).text();
         if(isMedia =="Log in") {
-            $(el).children(".sub").find("video").get(0).play();
+            $(el).children(".sub").find("video").get(0).load();
         }
         if(!isBgGnb) {     
             $header.prepend(

@@ -280,6 +280,7 @@ body {
                                             color:#ada699;
                                             margin-top:10px
                                         }
+                                        
                                     }
                                 }
                                 &:nth-of-type(2){
@@ -343,29 +344,18 @@ body {
                                     }
                                 }
                             }
-                            
-                            
                             a {
                                 display:block;
                                 width:100px;height:24px;
                                 padding:10px 30px 10px 20px;
-                                color:#d8681e;
-                                font: 300 12px/25px 'Jost';
+                                color:#ada699;
+                                font: 200 10px/25px 'Jost';
                                 margin-top:240px;
                                 transform:translateX(230%);
-                                em {
-                                    font:300 10px/35px 'Jost';
-                                    color:#333;
-                                    
-                                }
                                 &:hover,&:focus{
-                                    color:#ada699;
-                                    font-weight: 500;
-                                    // background:#ddd8ce;
-
                                     &::before,&::after {
                                         right:10px;
-                                        background: #ada699;
+                                        background:#d8681e;
                                     }
                                 }
                                 &::before {
@@ -373,7 +363,7 @@ body {
                                     position:absolute; right:20px;top:45%;
                                     width:5px; height:1px;
                                     transform: rotate(45deg);
-                                    background:#d8681e;
+                                    background:#ada699;
                                     transition: 0.5s;
                                 }
                                 &::after {
@@ -381,7 +371,7 @@ body {
                                     position:absolute; right:20px;top:54%;
                                     width:5px; height:1px;
                                     transform: rotate(-45deg);
-                                    background:#d8681e;
+                                    background:#ada699;
                                     transition: 0.5s;
                                 }
                             }
@@ -592,7 +582,6 @@ body {
                                 width:200px; height:160px;
                                 background:url(../img/li4.jpg) no-repeat center/cover;
                                 filter:contrast(30%) brightness(1.6);
-    
                             }
                             &::before {
                                 content:"Thanks for being interested!    -----------  2021";display: block;
