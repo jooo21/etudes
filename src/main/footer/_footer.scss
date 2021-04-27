@@ -10,14 +10,12 @@
         }
         .left {
             float:left;text-align: left;
-            
             .inner {
                 width:100%;
                 b {
                     display: block;margin-bottom:10px;
                     font: bold 14px/1 'Cormorant Infant', serif;
                     color:#333;
-    
                     i {
                         font-size:10px;
                     }
@@ -27,7 +25,8 @@
                     color:#555;
                     margin-bottom:20px;margin-left:10px;
                     i {margin-right:5px;}
-                    &:last-of-type {margin:30px 0px 0px 0px; font:normal 12px/1 'Cormorant Infant', serif;color:#333;}
+                    &:last-of-type {margin:30px 0px 0px 0px; font:normal 12px/1 'Cormorant Infant', serif;
+                        color:#333;}
                     a {
                         font: normal 12px/1 'Cormorant Infant', serif;
                         color:#555;
@@ -35,7 +34,6 @@
                 }
             }
         }
-
         .right {
             float:right;
             position: relative;
@@ -50,41 +48,39 @@
                     margin-bottom:100px;
                     text-align: right;
                     margin-bottom:30px;
-
                     li{
                         display: inline-block; padding-left:40px;
-                        
                         a {
                             font-size: 20px;
                             color:#555;
                         }
                     }
                     &::after {
-                    content: ""; display: block;clear:both;}
+                    content: ""; display: block;clear:both;
+                    }
                 }
                 h1{
                     width:100%;
-                    font:bold 40px/1 "Cormorant Infant";color:#555;margin-bottom:20px;
-                    
+                    font:bold 40px/1 "Cormorant Infant";
+                    color:#555;
+                    margin-bottom:20px;
                 }
-                
-                
                 select{
-                    width:250px; height:30px;border:1px solid #ccc;background: rgb(250,250,250);
+                    width:250px; height:30px;
+                    border:1px solid #ccc;
+                    background: rgb(250,250,250);
                     padding-left:30px;
-                    font:normal 12px/1 'Cormorant Infant', serif;color:#555;
+                    font:normal 12px/1 'Cormorant Infant', serif;
+                    color:#555;
                     option{
                         font:normal 12px/1 'Cormorant Infant', serif;
                         color:#555;
                     }
                 }
-                
             }
-    }
-    
+        }
     }
 }
-
 // ---------------tablet---------------
 @media screen and (max-width:1179px){
      #footer {
@@ -94,70 +90,37 @@
              .left {
                  .inner {
                      b {
-                         display: block;margin-bottom:10px;
                          font: bold 14px/1 'Jost', serif;
-                         color:#333;
                          &:nth-of-type(1) {display: none;}
-         
-                         i {
-                             font-size:10px;
-                         }
                      }
                      p {
                          font:200 12px/1 'Jost', serif;
-                         color:#555;
-                         margin-bottom:20px;margin-left:10px;
                          &:nth-of-type(1) {display: none;}
-                         i {margin-right:5px;}
-                         &:last-of-type {margin:30px 0px 0px 0px; font:normal 12px/1 'Jost', serif;color:#333;
-                        
+                         &:last-of-type {margin:30px 0px 0px 0px; font:normal 12px/1 'Jost', serif;
                         }
-                         a {
-                             font: normal 12px/1 'Jost', serif;
-                             color:#555;
-                         }
                      }
                  }
              }
-     
              .right {
                  .inner {
                      p{
                          display: none;
                      }
                      .sns {
-                         margin-bottom:100px;
-                         text-align: right;
-                         margin-bottom:30px;
-     
                          li{
                              display: inline-block; padding-left:20px;
-                             
                              a {
                                  font-size: 15px;
                              }
                          }
                      }
-                     h1{
-                         width:100%;
-                         font:bold 40px/1 "Cormorant Infant";color:#555;margin-bottom:20px;
-                         
-                     }
-                     
-                     
                      select{
-                            width:150px; height:30px;border:1px solid #ccc;background: rgb(250,250,250);
-                         padding-left:30px;
-                         font:normal 12px/1 'Jost', serif;color:#555;
-                         option{
-                             font:normal 12px/1 'Jost', serif;
-                             color:#555;
-                         }
-                     }
-                     
-                 }
-         }
-         
+                        width:150px; height:30px;
+                        background: rgb(250,250,250);
+                        padding-left:10px;
+                    }
+                }
+            }
          }
      }
 }
@@ -167,11 +130,15 @@
     #footer {
         height:200px;
         .inner {
+            position: relative;
+            height:100%;
             .left {
                 display: none;
             }
-    
             .right {
+                position:absolute;
+                left:50%;
+                transform:translateX(-50%);
                 .inner {
                     text-align: center;
                     p{
@@ -180,16 +147,16 @@
                     .sns {
                         
                         li{
-                            display: inline-block; padding:0px 20px;
+                            display: inline-block; padding:0px 5px;
                         }
                     }
                     
                     select{
                            width:100%; 
+                           padding-left:10px;
                     }
                 }
-          }
-        
+            }
         }
     }
 }
