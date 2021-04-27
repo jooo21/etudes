@@ -32,7 +32,7 @@ $(document).ready(function(){
                 $("<div class='bgGnb'>")
                     .css({
                         width:"100%", height:ht, backgroundColor:bg, 
-                        position:"absolute", left:0, top:posY, display:"none",overflow:"hidden", borderBottom:"1px solid #e9e4dc"
+                        position:"absolute", left:0, top:posY, display:"none",overflow:"hidden", borderBottom:"1px solid #e9e4dc",zIndex:2
                     })
             )
         }
@@ -48,7 +48,7 @@ $(document).ready(function(){
             $(el).children(".sub").find("video").get(0).pause();
         }
 
-        $(el).children(".sub").stop().hide();
+        $(el).children(".sub").hide();
         $(".bgGnb").hide();
     }
     //moGnb

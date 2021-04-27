@@ -46,4 +46,14 @@ $(document).ready(function(){
         $(el).children(".sub").stop().hide();
         $(".bgGnb").hide();
     }
+    //moGnb
+    var $moGnbBtn =$(".moGnbBtn");
+    var $moGnb =$(".moGnb");
+
+    $moGnbBtn.on("click",function(e){
+        e.preventDefault();
+
+        $(this).toggleClass("on");
+        $moGnb.toggleClass("on");
+    })
 });

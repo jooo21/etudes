@@ -1,11 +1,6 @@
-
-
 body {
     background:#f2f2f2;
 }
-
-
-
 #header_sub {
    width: 100%;position: relative;z-index:3;border-bottom:0.5px solid #e9e4dc;
 
@@ -96,36 +91,73 @@ body {
                     
                     border-color:#d8691e ;
                 }
-                
             }
        }
-        .moGnb {
-            display:none; width:30px; height:30px;position: absolute;
-            right:0px;top:50%;margin-top:-15px;
+       .moGnb{
+        display: none;
+        position:fixed;
+        right:0px;top:0px;
+        width:70%;
+        height:100vh;
+        overflow: hidden;
+        &::before {
+            content:"";display:block;
+            position:absolute;
+            right:20px;top:10px;
+            width:100px;height:100px;
+            border-radius: 50%;
+            background:#d8691e;
+            transition: 0.4s;
+            opacity: 0;
+        }
+        .inner {
+            position:absolute;
+            left:20px;top:10px;
+            width:100%;height:100%;
+            opacity: 0;
+            transition: 0.4s 0.4s;
+            transform: translateX(-50%);
+        }
+        &.on{
+            &::before {
+                transition: 0.7s;
+                opacity:1;
+                right:-50%;top:-50%;
+                width:200%; height:100%;
+            }
+            .inner {
+                opacity: 1;
+                transform: translateX(100%);
+            }
+        }
+    }
+    .moGnbBtn {
+        display:none; width:30px; height:30px;position: absolute;
+        right:5%;top:50%;margin-top:-15px;
+        span{
+            display:block; width:80%; height:2px; background:#555; position:absolute; top:50%; left:6px; margin-top:-1px; text-indent:-9999px; transition:0.5s;border-radius: 1px;
+        }
+        &::before {
+            content:""; display:block; width:100%; height:2px; background:#555; position:absolute; top:0px; left:0px;
+             transition:top 0.5s 0s, transform 0.5s 0.5s;border-radius: 1px;
+        }
+        &::after {
+            content:""; display:block; width:100%; height:2px; background:#555; position:absolute; bottom:0px; left:0px;
+            transition:bottom 0.5s 0s, transform 0.5s 0.5s;border-radius: 1px;
+        }
+
+        &.on{
             span{
-                display:block; width:80%; height:2px; background:#777; position:absolute; top:50%; left:6px; margin-top:-1px; text-indent:-9999px; transition:0.5s;border-radius: 1px;
+            transform:translateX(100%); opacity:0;
             }
             &::before {
-                content:""; display:block; width:100%; height:2px; background:#777; position:absolute; top:0px; left:0px;
-                 transition:top 0.5s 0s, transform 0.5s 0.5s;border-radius: 1px;
+                top:calc(50% - 1px); transform:rotate(45deg);
             }
             &::after {
-                content:""; display:block; width:100%; height:2px; background:#777; position:absolute; bottom:0px; left:0px;
-                transition:bottom 0.5s 0s, transform 0.5s 0.5s;border-radius: 1px;
+                bottom:calc(50% - 1px); transform:rotate(-45deg);
             }
-
-            &.on{
-                span{
-                transform:translateX(100%); opacity:0;
-                }
-                &::before {
-                    top:calc(50% - 1px); transform:rotate(45deg);
-                }
-                &::after {
-                    bottom:calc(50% - 1px); transform:rotate(-45deg);
-                }
-            }    
-        }
+        }    
+    }
         #gnb {
            width:85%;float:left;position: relative;
            border-left:1px solid #e9e4dc;box-sizing:border-box;
@@ -151,7 +183,6 @@ body {
                         }
                         color:#ada699;
                     }
-                    
                 }
                 .sub {
                     position: absolute;z-index:3; 
@@ -190,7 +221,7 @@ body {
     
                             }
                             &::before {
-                                content:"Thanks for being interested!    -----------  2020";display: block;
+                                content:"Thanks for being interested!    -----------  2021";display: block;
                                 position:absolute;
                                 letter-spacing: 3px;
                                 bottom:49%; left:-80%;
@@ -433,7 +464,7 @@ body {
     
                             }
                             &::before {
-                                content:"Thanks for being interested!    -----------  2020";display: block;
+                                content:"Thanks for being interested!    -----------  2021";display: block;
                                 position:absolute;
                                 letter-spacing: 3px;
                                 bottom:49%; left:-80%;
@@ -564,7 +595,7 @@ body {
     
                             }
                             &::before {
-                                content:"Thanks for being interested!    -----------  2020";display: block;
+                                content:"Thanks for being interested!    -----------  2021";display: block;
                                 position:absolute;
                                 letter-spacing: 3px;
                                 bottom:49%; left:-80%;
@@ -720,7 +751,7 @@ body {
                                 margin-bottom:40px;
                             }
                             &::before {
-                                content:"Thanks for being interested!    -----------  2020";display: block;
+                                content:"Thanks for being interested!    -----------  2021";display: block;
                                 position:absolute;
                                 letter-spacing: 3px;
                                 bottom:49%; left:-80%;
@@ -902,7 +933,7 @@ body {
                                 margin-bottom:40px;
                             }
                             &::before {
-                                content:"Thanks for being interested!    -----------  2020";display: block;
+                                content:"Thanks for being interested!    -----------  2021";display: block;
                                 position:absolute;
                                 letter-spacing: 3px;
                                 bottom:49%; left:-80%;
@@ -1092,7 +1123,7 @@ body {
                                 margin-bottom:40px;
                             }
                             &::before {
-                                content:"Thanks for being interested!    -----------  2020";display: block;
+                                content:"Thanks for being interested!    -----------  2021";display: block;
                                 position:absolute;
                                 letter-spacing: 3px;
                                 bottom:49%; left:-80%;
@@ -1205,7 +1236,7 @@ body {
                                 margin-bottom:40px;
                             }
                             &::before {
-                                content:"Thanks for being interested!    -----------  2020";display: block;
+                                content:"Thanks for being interested!    -----------  2021";display: block;
                                 position:absolute;
                                 letter-spacing: 3px;
                                 bottom:49%; left:-80%;
@@ -1318,4 +1349,163 @@ body {
         }
    }
 }
-// @media screen and (max-width:)
+@media screen and (max-width:1179px){
+    #header_sub {
+        .inner {
+            width: 100%;padding:0px 40px;box-sizing:border-box;
+            
+            >h1 {
+                padding-top:0px;
+                a {
+                    font:bold 40px/100px "Cormorant Infant";
+                }
+            }
+            .util { display: none;}
+            .moGnb{
+                display: block;
+                transition:0.5s 0s;
+                transform:translateX(100%);
+                &::before {
+                    content:"";display:block;
+                    position:absolute;
+                    right:20px;top:10px;
+                    width:100px;height:100px;
+                    border-radius: 50%;
+                    background:#3b3b3bce;
+                    transition: 0.4s;
+                    opacity: 0;
+                }
+                >a {
+                    position:absolute;
+                    left:10%;top:36px;
+                    display: block;
+                    z-index: 3;
+                    i{
+                        font-size: 30px;
+                        color: #fff;
+                        transition: 0.4s;
+                        opacity: 0;
+                    }
+                }
+                svg {
+                        width:100%; height:100vh;
+                        position: absolute;
+                        left:0%; top:0%;
+                        .cir1 {
+                            stroke: transparent;
+                            fill:#e2602d;
+                            filter:blur(5px);
+                        }
+                    }
+                .inner {
+                    position:absolute;
+                    left:0%;top:0px;
+                    width:100%;height:100%;
+                    opacity: 0;
+                    transform: translateX(-100%);
+                    padding:200px 0px 0px 10%;
+                    box-sizing: border-box;
+                    
+                    a {
+                        display: block;
+                        width:50%;
+                        color:#fff;
+                        margin-bottom: 70px;
+                        font:200 36px/1 "Jost";
+                        color: #fff;
+                        position:relative;
+                        &::after {
+                            content:""; display: block;
+                            width:100%;height:1px;
+                            background:#fff;
+                            position:absolute;
+                            left:-3%;top:55%;
+                            transform: scaleX(0);
+                            transition:0.3s;
+                            transform-origin: left;
+                        }
+                        &:hover {
+                            &::after {
+                                transition:0.5s;
+                                transform: scaleX(1);
+                             }
+                        }
+                    }
+                    
+                }
+                &.on{
+                    display: block;
+                    transition:1s;
+                    transform: translateX(0%);
+                    &::before {
+                        transition: 0.7s;
+                        opacity:1;
+                        right:-50%;top:-50%;
+                        width:400%; height:200%;
+                    }
+                    >a i{
+                        transition: 0.7s;
+                        opacity:1;
+                    }
+                    .inner {
+                        opacity: 1;
+                        transition: 1s 0.2s;
+                        transform: translateX(0%);
+                    }
+                }
+            }
+             .moGnbBtn {
+                    display:block; z-index:3;
+                    &.on{
+                        position:fixed;
+                        right:5.5%;top:5%;
+                        span{
+                            background:#fff;
+                        }
+                        &::before {
+                            background:#fff;
+                        }
+                        &::after {
+                            background:#fff;
+                        }
+                    }    
+                }
+             #gnb {
+                display: none;
+             }
+        }
+     }
+     
+}
+
+// -------mobile-------------
+@media screen and (max-width:539px){
+    #header_sub {
+    position:fixed;
+    background:#f2f2f2;
+        .inner {
+            height:80px;
+            >h1{
+                height:100%;
+                a{
+                    line-height: 80px;
+                }
+            }
+            .moGnb{
+                width:100%;
+                .inner {
+                    a {
+                        &::after {
+                            width:120%;
+                        }
+                    }
+                }
+                &.on{
+                    &::before {
+                        width:500%;
+                    }
+                }
+            }
+        }
+     }
+}

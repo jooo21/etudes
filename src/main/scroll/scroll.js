@@ -6,7 +6,7 @@ $(document).ready(function(){
     var speed = 1000;
     var len = $scrollbtns.length;
     var posArr;    
-    var baseLine = -100;
+    var baseLine = -400;
 
     //처음 로딩시 해당 박스의 세로 위치값을 구해는 함수 호출
     setPos();
@@ -23,7 +23,7 @@ $(document).ready(function(){
     //브라우저 스크롤시 해당 스크롤값과 박스의 위치값을 비교해서
     //자동으로 버튼 활성화 해주는 함수 호출
     $(window).on("scroll", function(){
-        var scroll = $(this).scrollTop()+300;  
+        var scroll = $(this).scrollTop()+200;  
     //세로위치값으로 이동 시키는 함수에서 더 위로 간 위치값 뺀만큼 더해주기
 
         activateBtn(scroll);    
@@ -56,7 +56,7 @@ $(document).ready(function(){
     function moveScroll(el){
         var target = $(el).find("a").attr("href");
         var targetPos = $(target).offset().top; 
-        $("html, body").stop().animate({ scrollTop : targetPos-300 },speed);
+        $("html, body").stop().animate({ scrollTop : targetPos-200 },speed);
     }
 
 
