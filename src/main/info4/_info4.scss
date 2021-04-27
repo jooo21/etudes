@@ -5,7 +5,6 @@
         position: relative;
         .con7left{
             float:left;width:30%;
-            
             h1 {
                 margin-bottom:30px;
             }
@@ -22,20 +21,21 @@
                     content:"";display: block;clear: both;
                 }
                 li{
-                    float:left;width:(100%/3);height:260px;padding:30px 20px; box-sizing: border-box;
+                    float:left;width:(100%/3);padding:30px 20px; box-sizing: border-box;
                     >a {
                         display: block;width:100%; height:100%; box-shadow: 3px 3px 10px #00000013;
                         padding:20px; box-sizing: border-box;transition:0.5s;
+                        position:relative;
                         &:hover{
                             box-shadow: 1px 1px 1px #00000013;
                         }
-                    
                         >p{
-                            font:300 12px/1.5 "Jost";color:#8f8a82;margin-bottom: 40px;
+                            font:300 12px/1.5 "Jost";color:#8f8a82;margin-bottom: 80px;
                         }
                         .name {
+                            position:absolute; bottom:10%;
                             >span {
-                                display: block;float:left;width: 30px; height:30px; border-radius: 15px;
+                                display: block;float:left;width: 30px; height:30px; border-radius: 50%;
                                 background:#d8691e;margin-right:15px;
                                 
                             } 
@@ -47,8 +47,7 @@
                                 }
                             }
                         }
-                        
-                        }
+                    }
                     &:nth-of-type(1){
                         .name>span::before {
                             content:"K";display:block;width:100%; height:100%;
@@ -81,7 +80,6 @@
                 transform: translateX(0px);
             }
         } 
-        
     }
 }
 
@@ -92,8 +90,7 @@
         .inner {
             width:100%;height:750px;padding:100px 60px;
             .con7left{
-                float:none;width:100%;margin-bottom:50px;
-                
+                float:none;width:50%;margin-bottom:50px;
                 h1 {
                     font:300 30px/1.2 "Jost";margin-bottom:30px;
                 }
@@ -105,12 +102,41 @@
                 width:100%;float:none;margin-top:0px;
                 ul {
                     li{
-                       height:300px;position:relative;
+                       position:relative;
+                       padding:10px;
                         >a {
-                            
+                            padding:20px;
+                            >p{
+                                line-height: 1.2;
+                                margin-bottom:150px;
+                            }
                             .name {
-                                position: absolute;bottom:20%;
-                               
+                                position: absolute;
+                                bottom:10%;
+                                margin-right:0px;
+                                margin-left:15px;
+                                text-align:center;
+                                >span {
+                                    width:50px;height:50px;
+                                }
+                                >em {
+                                    margin-top:10px;
+                                }
+                            }
+                        }
+                        &:nth-of-type(1){
+                            .name>span::before {
+                                line-height: 50px;
+                            }
+                        }
+                        &:nth-of-type(2){
+                            .name>span::before {
+                                line-height: 50px;
+                            }
+                        }
+                        &:nth-of-type(3){
+                            .name>span::before {
+                                line-height: 50px;
                             }
                         }
                     }
@@ -123,31 +149,21 @@
 // -------mobile-------------
 @media screen and (max-width:539px){
     #con7 {
-        height:1300px;
+        height:1050px;
         .inner {
-            width:100%;height:1300px;padding:70px 30px;
+            height:1300px;padding:70px 60px;
             .con7left{
-                float:none;width:100%;margin-bottom:50px;opacity:1;
-                
-                h1 {
-                    font:300 30px/1.2 "Jost";margin-bottom:30px;
-                }
-                >p{
-                    font:300 16px/1.3 "Jost";color:#888;
-                }
+                opacity:1;
             }
             .con7right {
-                width:100%;float:none;margin-top:0px;
                 ul {
                     li{
-                       height:300px;width:100%;position:relative;
-                        >a {
-                            
-                            .name {
-                                position: absolute;bottom:20%;
-                               
-                            }
-                        }
+                       width:100%;height:200px;
+                       >a {
+                           .name {
+                               margin-left:0px;
+                           }
+                       }
                     }
                 }
             }
