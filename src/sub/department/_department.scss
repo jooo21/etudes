@@ -393,8 +393,9 @@
          .inner {
            width:90%;height:3000px;
            padding:150px 40px;
-            
+            overflow: hidden;
             .circleTabMenu {
+                width:100%;
                 #circleTab {
                     dt {
                         width:(100%/3); 
