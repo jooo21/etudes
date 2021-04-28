@@ -3,7 +3,10 @@
     .sub_visual {
         width:100%; height:300px;position: relative;
         &::before {
-            content:"";width: 100%; height:100%; position: absolute;top:0px; left:0px; background:url(../img/sub2.jpg) no-repeat top center/cover; 
+            content:"";width: 100%; height:100%; 
+            position: absolute;top:0px; left:0px; 
+            background:url(../img/sub2.jpg) no-repeat top center/cover;
+            filter:contrast(60%);
         }
         .visualH1 {
             font:100 34px/1 'Jost', sans-serif; color:#eee;text-align: center;
@@ -16,29 +19,37 @@
             }
          }
          >p {
-            font:200 14px/1 'Inter', sans-serif; color:#ddd;text-align: center;letter-spacing: -0.5px;
-            position: absolute; top:150px;left:50%; transform:translateX(-50%);
+            font:200 14px/1 'Jost', sans-serif;
+             color:#ddd;text-align: center;
+             letter-spacing: -0.5px;
+            position: absolute; 
+            top:150px;left:50%; 
+            transform:translateX(-50%);
          }
     }
-    
-    
     .inner {
-        width:1180px; height:2500px;margin:0px auto; position: absolute;top:350px;left:50%; transform:translateX(-50%);padding:100px 50px;box-sizing:border-box;background:#f2f2f2;overflow:hidden;
+        width:1180px; height:2500px;
+        margin:0px auto; 
+        position: absolute;top:350px;left:50%; 
+        transform:translateX(-50%);
+        padding:150px 50px;box-sizing:border-box;
+        background:#f2f2f2;
+        overflow:hidden;
         box-shadow: 8px 8px 20px rgba(148, 148, 148, 0.1);
         .min_menu {
-           width:100%;position: absolute;top:0px; left:0px;box-sizing: border-box;border-bottom:1px solid #ddd;
-           li {
-               float:left;height:65px;padding:10px 25px;box-sizing: border-box;
-               text-align:center;border-right:1px solid #ccc;
-               
-               a {
-                   font:200 14px/45px "Cormorant Infant"; color:#aaa;letter-spacing:1px;
-                   i {font-size:12px;}
-               
-               }
-               
-           }
-       }
+            width:100%;position: absolute;top:0px; left:0px;box-sizing: border-box;border-bottom:1px solid #ddd;background:#f2f2f2;
+            li {
+                float:left;height:65px;padding:10px 25px;box-sizing: border-box;
+                text-align:center;border-right:1px solid #ccc;
+                
+                a {
+                    font:100 14px/45px "Cormorant Infant"; color:#aaa;letter-spacing:1px;
+                    i {font-size:12px;}
+                
+                }
+                
+            }
+        }
        ul.menu {
            width:100%;margin:0px auto 100px;
            &::after {
@@ -154,7 +165,6 @@
                     }
                    
                  }
-               
            }
        }
         .tab {
@@ -166,20 +176,17 @@
                 }
                 li {
                     width: (100%/3);height: 50px; box-sizing: border-box;
-                    float:left;text-align:center;transition:0.5s;
+                    float:left;text-align:center;
                     border-bottom:1px solid #ada6994b;
-                    
-                    &:hover,&.on {
-                        border-left:1px solid #ada6994b;
-                        border-top:2px solid #fff;
-                        border-right:1px solid #ada6994b;
-                        border-bottom:none;
-                    }
-
                     a {
                         display: block;
                         font: normal 14px/50px "Cormorant Infant";
                         color:#555;
+                        transition:0.5s;
+                        border-top:2px solid #f2f2f2;
+                        &:hover,&.on {
+                            border-top:3px solid #fff;
+                        }
                     }
                 }
             }
@@ -341,26 +348,18 @@
 
             }
         }
-        
     }
 }
-
 //---------------tablet-------------------------
-
 @media screen and (max-width:1179px){
     .community {
+        height:2900px;
         .sub_visual {
-            .textmove {
-                width:100%;
-                p { 
-                    display: none;
-                }
-             
-            }
-            
-        }
+            width:100%; height:300px;margin-bottom:60px;
+          }
         .inner {
-            width:100%;padding:0px 20px; box-sizing: border-box;
+            width:90%;height:2500px;
+            padding:150px 40px;
             .menu {
                 margin-bottom:50px;
                 
@@ -369,7 +368,6 @@
                     
                     a {
                          font-size:20px;
-                         
                     }
                 }
             }
@@ -419,6 +417,12 @@
 //-------------mobile-----------------
 @media screen and (max-width:539px){
     .community {
+        .visualH1 {
+            width:100%;
+         }
+         >p{
+            width:100%;
+         }
         .inner {
             .menu {
                 width: 100%;

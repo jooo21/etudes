@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     var url = 'https://www.flickr.com/services/rest/?method=flickr.interestingness.getList';
     var url_search='https://www.flickr.com/services/rest/?method=flickr.photos.search';
-    var key = '07fe790987bdfb01f0387be7a19d4167';
+    var key = '795ec68eff11550e1c52deed3a86011b';
     
     //브라우저 로딩시 Flickr 데이터 호출
     getFlickr(url, key, 27);

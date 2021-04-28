@@ -334,7 +334,12 @@
 @media screen and (max-width:539px){
     // content
     .faq {
-        
+        .visualH1 {
+            width:100%;
+         }
+         >p{
+            width:100%;
+         }
         .inner {
             padding:0px 20px;min-width: 400px;
             dl {
