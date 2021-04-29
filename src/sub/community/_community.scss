@@ -10,7 +10,8 @@
         }
         .visualH1 {
             font:100 34px/1 'Jost', sans-serif; color:#eee;text-align: center;
-            position: absolute; top:110px;left:50%; transform:translateX(-50%);
+            position: absolute; top:110px;left:50%; 
+            transform:translateX(-50%);
             span {
                 font: 100 12px/1 'Noto Sans KR', sans-serif;
                 &::before{
@@ -37,7 +38,8 @@
         overflow:hidden;
         box-shadow: 8px 8px 20px rgba(148, 148, 148, 0.1);
         .min_menu {
-            width:100%;position: absolute;top:0px; left:0px;box-sizing: border-box;border-bottom:1px solid #ddd;background:#f2f2f2;
+            width:100%;position: absolute;top:0px; left:0px;
+            box-sizing: border-box;border-bottom:1px solid #ddd;background:#f2f2f2;
             li {
                 float:left;height:65px;padding:10px 25px;box-sizing: border-box;
                 text-align:center;border-right:1px solid #ccc;
@@ -444,7 +446,6 @@
                 top:250px;
             }
         }
-         
         .inner {
             width:80%;
             min-width:400px;

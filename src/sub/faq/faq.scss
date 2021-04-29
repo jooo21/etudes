@@ -1,56 +1,62 @@
-// content
 .faq {
-    width:100%;height:3000px;background:#fdfdfd;
+    width:100%;height:2200px;background:#fdfdfd;
 
     .sub_visual {
         width:100%; height:300px;position: relative;
         &::before {
-            content: "";display: block;width:100%; height:100%;
-            background:url(../img/p2.jpg) no-repeat bottom center/cover;
-            filter: grayscale(0.3) brightness(1.4) contrast(40%);
+            content:"";width: 100%; height:100%; 
+            position: absolute;top:0px; left:0px; 
+            background:url(../img/p2.jpg) no-repeat center/cover;
+            filter:contrast(60%);
         }
-        
-    }
-    .visualH1 {
-        font:100 34px/1 'Jost'; color:#eee;text-align: center;
-        position: absolute; top:210px;left:50%; transform:translateX(-50%);
-        span {
-            font: 100 12px/1 'Noto Sans KR', sans-serif;
-            &::before{
-                content:" / ";
+        .visualH1 {
+            font:100 34px/1 'Jost', sans-serif; color:#eee;text-align: center;
+            position: absolute; top:110px;left:50%; 
+            transform:translateX(-50%);
+            span {
+                font: 100 12px/1 'Noto Sans KR', sans-serif;
+                &::before{
+                    content:" / ";
+                }
             }
-        }
-     }
-     >p {
-        font:200 14px/1 'Jost'; color:#ddd;text-align: center;letter-spacing: -0.5px;
-        position: absolute; top:250px;left:50%; transform:translateX(-50%);
-     }
-    
+         }
+         >p {
+            font:200 14px/1 'Jost', sans-serif;
+             color:#ddd;text-align: center;
+             letter-spacing: -0.5px;
+            position: absolute; 
+            top:150px;left:50%; 
+            transform:translateX(-50%);
+         }
+    }
     >.inner {
-        width:1180px;height:2600px;margin:0px auto;position: absolute;top:350px;left:50%; transform:translateX(-50%);background:#fff;padding:150px 50px;box-sizing:border-box;
-        box-shadow: 5px 5px 12px #94949442;
+        width:1180px;height:1800px;
+        margin:0px auto;
+        position: absolute;top:350px;left:50%;
+         transform:translateX(-50%);
+         background:#fff;
+         padding:150px 50px;box-sizing:border-box;
+         box-shadow: 8px 8px 20px rgba(148, 148, 148, 0.1);
         .min_menu {
-            width:100%;position: absolute;top:0px; left:0px;box-sizing: border-box;border-bottom:1px solid #ddd;
+            width:100%;position: absolute;top:0px; left:0px;
+            box-sizing: border-box;border-bottom:1px solid #ddd;
             li {
                 float:left;height:65px;padding:10px 25px;box-sizing: border-box;
                 text-align:center;border-right:1px solid #ccc;
-                
                 a {
-                    font:200 14px/45px "Cormorant Infant"; color:#aaa;letter-spacing:1px;
+                    font:200 14px/45px "Cormorant Infant"; color:#aaa;
+                    letter-spacing:1px;
                     i {font-size:12px;}
-                
                 }
-                
             }
         }
-        
-        .innerH1 {
-            font:bold 30px/1 "Cormorant Infant"; color:#555; padding:30px 0px 20px;text-align: center;margin-bottom:70px;
-
-        }
-        
+        .innerH1{
+            text-align: center;
+            font:400 24px/1 "Cormorant Infant"; color:#555;margin-bottom:100px;
+        }        
         dl {
             width: 100%; margin:0px auto; position: relative;margin-bottom:100px;
+            z-index:2;
             dt {
                 width: 100%;height: 250px;background:#fff;position:relative;cursor: pointer;
                 >p{
@@ -97,8 +103,6 @@
                             }
                         }
                     }
-                    
-
                 }
                 >a {
                     display: block; width: 15%;height:50px; float: left;box-sizing: border-box;background:#d6d1cb; font:200 11px/50px "Cormorant Infant";text-align:left;text-indent:25px;color:#fff;letter-spacing: 1px;
@@ -142,6 +146,10 @@
         }
         .pagination {
             width:60%; text-align: center;margin:0px auto 100px;
+            position:absolute; bottom:0px;
+            left:50%;
+            transform: translateX(-50%);
+            z-index:1;
             &::after {
                 content:""; display: block; clear: both;
             }
@@ -185,100 +193,7 @@
 
             }
         }
-        #service {
-            width:100%;height:700px;
-            
-            .inner{
-                width:100%;
-                h1{
-                    font:300 34px/1 "Cormorant Infant"; color:#555;text-align: center;
-                    margin-bottom:100px;
-                }
-                ul {
-                    perspective: 2000px;
-            
-                    &::after {
-                        content: "";
-                        display: block;
-                        clear: both;
-                    }
-            
-                    li {
-                        width: 49%;
-                        height:130px;
-                        margin-bottom: 20px;
-                        opacity:0;
-                        transition: 0.5s;
-                        box-sizing: border-box;
-                        background:#ccc;
-                        &:nth-of-type(odd) {
-                            float: left;
-                            transform-origin: right center;
-                            padding:0px 0px 0px 100px;
-                            transform: rotateY(80deg);
-                            span{
-                                float:right;width:90px; height:90px; border-radius: 50%;
-                                background:#555;text-align: center;
-                                i{
-                                    font-size:18px;line-height:90px; color:#f2f2f2;
-                                }
-                            }
-                            >div {
-                                float:right;width:70%;text-align:right;
-                                h2 {
-                                    font:300 20px/1 "Jost"; color:#555;
-                                }
-                                p{
-                                    
-                                    font:200 16px/1 "jost";color:#777;
-                                }
-                            }
-
-                        }
-                        &:nth-of-type(even) {
-                            float: right;
-                            transform-origin: left center;
-                            padding:0px 100px 0px 0px;
-                            transform: rotateY(-80deg);
-                            span{
-                                float:left;width:90px; height:90px; border-radius: 50%;
-                                background:#555;text-align: center;
-                                i{
-                                    font-size:18px;line-height:90px; color:#f2f2f2;
-                                }
-                            }
-                            >div {
-                                float:left;width:70%;
-                                h2 {
-                                    font:300 20px/1 "Jost"; color:#555;
-                                }
-                                p{
-                                    font:200 16px/1 "jost";color:#777;
-                                }
-                            }
-                        }
-            
-                        @for $i from 1 through 10 {
-                            &:nth-of-type(#{$i}) {
-                                transition-delay: 0.1s * $i;
-                            }
-                        }
-                    }
-                }
-                
-                &.on {
-                    ul li {
-                        opacity: 1;
-                        transform: rotateY(0deg);
-                    }
-                }
-                >div {
-                    width:(100%/3); height:300px;
-                    border:1px solid #777;float:left;
-                }
-            }
-            
-        }
+        
     }
 }
 
@@ -286,12 +201,16 @@
 @media screen and (max-width:1179px){
      // content
      .faq {
-        
+         height:2100px;
+        .sub_visual {
+            width:100%; height:300px;margin-bottom:60px;
+          }
         .inner {
-            width:80%;margin:0px auto;
+            width:90%;height:1700px;
+            margin:0px auto;
+            padding:150px 40px;
             .innerH1 {
-                display: inline-block; font:bold 30px/1 "Cormorant Infant"; color:#555; margin-bottom:100px;padding:30px 0px 0px;
-                position:relative;left:50%;transform:translateX(-50%);
+                margin-bottom:70px;
             }
             .menu {
                 width: 100%;margin-bottom:50px;
@@ -301,7 +220,7 @@
                 }
             }
             dl {
-                margin-bottom:60px;
+                margin-bottom:30px;
                 dt {
                     
                     .date {
@@ -323,8 +242,13 @@
                     line-height: 1.5;
                 }
             }
-            #pagin {
-                width: 100%;margin: 50px auto;
+            .pagination {
+                width:80%;
+                .numbers {
+                    a {
+                        &:nth-of-type(n+6):nth-of-type(-n+10){display:none;}
+                    }
+                }
             }
         }
     }
@@ -334,14 +258,28 @@
 @media screen and (max-width:539px){
     // content
     .faq {
-        .visualH1 {
-            width:100%;
-         }
-         >p{
-            width:100%;
-         }
+        height:2000px;
+        .sub_visual {
+            margin:0px;
+            .visualH1 {
+                width:100%;
+                top:210px;
+            }
+            >p{
+                width:100%;
+                top:250px;
+            }
+        }
         .inner {
-            padding:0px 20px;min-width: 400px;
+            width:80%;
+            height:1600px;
+            min-width:400px;
+            top:280px;
+            padding:100px 40px;
+            .innerH1 {
+                margin-bottom:50px;
+            }
+        
             dl {
                 margin-bottom:50px;
                 dt {
@@ -355,13 +293,13 @@
                     }
                     >a {
                         right:10px; top:30%;background:#fff ;
-                          
                     }
                 }
             }
-            #pagin {
-                width: 100%;margin: 30px auto;
-                
+            .pagination {
+                .numbers {
+                    display:none;
+                }
             }
         }
     }
