@@ -1402,7 +1402,6 @@ body {
                         color:#fff;
                         margin-bottom: 70px;
                         font:200 36px/1 "Jost";
-                        color: #fff;
                         position:relative;
                         &::after {
                             content:""; display: block;
@@ -1484,7 +1483,9 @@ body {
             .moGnb{
                 width:100%;
                 .inner {
+                    padding:100px 20px;
                     a {
+                        margin-bottom:30px;
                         &::after {
                             width:120%;
                         }
