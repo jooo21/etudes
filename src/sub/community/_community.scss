@@ -9,7 +9,9 @@
             filter:contrast(60%);
         }
         .visualH1 {
-            font:100 34px/1 'Jost', sans-serif; color:#eee;text-align: center;
+            font:100 34px/1 'Jost', sans-serif; 
+            color:#eee;
+            text-align: center;
             position: absolute; top:110px;left:50%; 
             transform:translateX(-50%);
             span {

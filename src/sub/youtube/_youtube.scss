@@ -502,22 +502,26 @@
                             transform: translateX(0%);
                             opacity:1;
                             left:5%;
-
                         }
                         p {
                             right:auto;
-                            left:50%;
+                            left:40%;
                         }
-                        &:hover {
+                    }
+                    &:hover {
+                        .pic{
+                            transform:scale(1);
+                        }
+                        .con{
                             h2{
                                 transform: translateX(0%);
                                 color:#333;
                                 opacity:1;
-                                left:10%;
+                                left:5;
                             }
                             p {
                                 right:auto;
-                                left:50%;
+                                left:40%;
                             }
                         }
                     }
@@ -534,7 +538,7 @@
                         }
                         p {
                             right:auto;
-                            left:50%;
+                            left:40%;
                             opacity:1;
                             bottom:0%;
                         }
