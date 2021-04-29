@@ -200,7 +200,13 @@
                 }
             }
         }
-        
+        >h2 {
+            font:300 12px/1 "Jost"; color:#555; text-align: left;text-indent:17px;
+            position:absolute; bottom:940px;
+                &::before {
+                    content:""; display:block; width:2px; height:12px; background:#d8681e;position:absolute;
+                }
+            }
         .inbottom {
             width:100%;text-align:center;position: absolute;bottom:110px;
             left:50%; transform: translateX(-50%);
@@ -377,6 +383,31 @@
         }
     }
 }
+.youtube_pop{
+    padding:100px;
+    >.close {
+        position:absolute; top:100px; right:40px;
+        color:#fff;padding-bottom:50px;
+        &::before {
+            content:"";display:block;
+            width:10px; height:1px;
+            background:#eee;
+            position:absolute;
+            left:50%;top:40px;
+            transform-origin: left;
+            transform:rotate(-45deg) translateX(-50%);
+        }
+        &::after {
+            content:"";display:block;
+            width:10px; height:1px;
+            background:#eee;
+            position:absolute;
+            left:50%;top:40px;
+            transform-origin: left;
+            transform:rotate(45deg) translateX(-50%);
+        }
+    }
+}
 // ---------------tablet---------------
 @media screen and (max-width:1179px){
     .youtube{
@@ -436,6 +467,13 @@
             .swiper-button-prev {
                 left:30%;
             }
+        }
+    }
+    .youtube_pop{
+        padding:150px 100px;
+        >.close {
+            position:absolute; top:150px; right:50px;
+            color:#fff;
         }
     }
 }
@@ -555,6 +593,13 @@
                 height:50px;
                 left:35%;
             }
+        }
+    }
+    .youtube_pop{
+        padding:200px 40px;
+        >.close {
+            position:absolute; top:100px; right:40px;
+            color:#fff;
         }
     }
 }

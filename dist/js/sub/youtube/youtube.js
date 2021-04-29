@@ -198,14 +198,12 @@ $(document).ready(function(){
                     .css({
                         width : opt.width, height: opt.height,
                         backgroundColor:opt.bg, position:"fixed", top:"50%", left:"50%",
-                        transform:"translate(-50%, -50%)", boxSizing:"border-box", padding:150
+                        transform:"translate(-50%, -50%)", 
+                        boxSizing:"border-box"
                     })
                     .append (
                         $("<a href='#' class='close'>")
-                            .text("close")
-                            .css({
-                                position: "absolute", top:100, right:20, color:"#fff"
-                            }),
+                            .text("close"),
                         $("<img src='img/loading2.gif'>")
                             .css({
                                 width:100, position:"absolute", top:"50%", left:"50%",

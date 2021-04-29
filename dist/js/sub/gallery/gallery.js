@@ -5,7 +5,7 @@ $(document).ready(function(){
     var key = '795ec68eff11550e1c52deed3a86011b';
     
     //브라우저 로딩시 Flickr 데이터 호출
-    getFlickr(url, key, 27);
+    getFlickr(url, key, 6);
 
     //리스트의 썸네일 클릭시
     $("body").on("click", "#gallery ul li a",function(e){
