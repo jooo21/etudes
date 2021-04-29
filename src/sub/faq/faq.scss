@@ -297,6 +297,14 @@
                     }
                     >a {
                         right:10px; top:30%;background:#fff ;
+                        &:hover,&.on {
+                            background:none;
+                            span {
+                                &::before,&::after {
+                                    background:#555;
+                                }
+                            }
+                        }
                     }
                 }
             }
