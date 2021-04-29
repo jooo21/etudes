@@ -1,12 +1,11 @@
-// content
 .location {
-    width:100%;height:2900px;
+    width:100%;height:3000px;
     .sub_visual {
         width:100%; height:300px;position: relative;
         &::before {
             content:"";width: 100%; height:100%; 
             position: absolute;top:0px; left:0px; 
-            background:url(../img/fa1.jpg) no-repeat top center/cover;
+            background:url(../img/fa1.jpeg) no-repeat center/cover;
             filter:contrast(60%);
         }
         .visualH1 {
@@ -32,7 +31,7 @@
          }
     }
     .inner {
-        width:1180px;height:2500px;
+        width:1180px;height:2600px;
         margin:0px auto;
         position: absolute;top:350px;left:50%;
         transform:translateX(-50%);
@@ -73,35 +72,52 @@
                 margin-bottom:80px;
             }
             >div {
-                width:(100%/3);float:left;padding:20px; box-sizing:border-box;
-                text-align:center;border-right:0.5px solid #948a7d71;
+                width:(100%/3);
+                float:left;
+                padding:20px; box-sizing:border-box;
+                text-align:center;
+                border:none;
+                position:relative;
+                &::after {
+                    content:"";display:block;
+                    width:1px; height:200px;
+                    position:absolute;
+                    right:-5px;top:0px;
+                    background:#aaa;
+                }
                 &:last-child {
-                    margin-right:0%;border-right:none;
+                    margin-right:0%;
+                    &::after {
+                        display:none;
+                    }
                 }
                 i {
-                    width:100%;color:#948a7d;margin-bottom:30px;
+                    width:100%;
+                    font-size:40px;
+                    color:#aaa;margin-bottom:30px;
                 }
                 em {
                     display: block;
                     font:200 18px/1 "Cormorant Infant"; color:#d8681e;margin-bottom:20px;
                 }
                 p{
-                    font:200 18px/1 "Cormorant Infant"; color:#999;
+                    font:200 18px/1 "Cormorant Infant"; color:#bbb;
                 }
             }
         }
         #map {
-            width: 100%; position:relative;margin-bottom:160px;
-            
-                .showBox {
-                    width: 100%; 
-                    height: 500px;
-                    background: #000;        
-                    transition: 1s;
-                    box-sizing:border-box;
-                    border:5px solid #948a7d;
-                    filter:contrast(80%) sepia(5%);
-                
+            width: 100%; 
+            position:relative;
+            margin-bottom:160px;
+            padding:10px;
+            background:#aaa;
+            .showBox {
+                width: 100%; 
+                height: 500px;
+                background: #000;        
+                transition: 0.5s;
+                box-sizing:border-box;
+                filter:contrast(50%) grayscale(1);
             }
             // &::after {
             //             content:""; display:block;width:100%; height:60px;
@@ -109,12 +125,13 @@
                         
             //         }
             >span {
-                position:absolute; right:5px;bottom:15px;font:bold 20px/1px "Cormorant Infant"; color:#b9b2a8;z-index:2;
+                position:absolute; right:5px;bottom:15px;font:bold 20px/1px "Cormorant Infant"; color:#b9b2a86c;z-index:2;
             }
             .traffic {
                 position:absolute; left:8px; 
                 bottom:70px;z-index:3;
-                filter:contrast(80%) sepia(5%);
+                transition:0.5s;
+                filter:contrast(50%) sepia(5%);
                 li {
                     margin-right: 10px;
 
@@ -123,7 +140,7 @@
                         width: 120px; 
                         height: 40px;
                         font: 300 12px/40px 'Noto Sans KR', sans-serif;
-                        background: #ffffffe6;box-sizing:border-box;
+                        background: #fff;box-sizing:border-box;
                         color:#000;border-radius: 4px;box-shadow: 1px 2px 2px #9797979f;
                         text-align: center;transition:0.5s;
                     }     
@@ -134,26 +151,23 @@
                     }
                 }
             }
-
             .branch {
-                width:100%;float: left;
-
+                width:100%;float: left;margin-bottom:5px;
                 li {
                     float: left;width:(100%/3);
-
                     a {
                         display: block;
                         width: 100%; 
                         height: 40px;
                         background: #555;
                         font: 100 12px/40px 'Noto Sans KR', sans-serif;
-                        background: #bdb7af;
+                        background: #bbb;
                         color:#eee;
                         text-align: center;transition:0.5s;
                     }     
                     &:hover,&.on {
                         a {
-                            background:#948a7d; color:#eee;
+                            background:#aaa; color:#eee;
                         }
                     }
                 }
@@ -167,7 +181,6 @@
                     display:block;
                     }
                 }
-                
             }
         }
         .info {
@@ -243,15 +256,13 @@
             }
         }
         #loBanner {
-            width:100%; position:absolute; left:0px; bottom:140px;background:#ddd; 
-            
-            .list {             
-                
+            width:100%;height:200px; position:absolute; left:0px; bottom:240px;background:#ddd; 
+            >.list {         
+                height:100%;
                 li {
-                    width:240px; height:200px;float:left; font-size:0;
-                    opacity:0.3; transition:0.5s; 
-                    padding:20px;box-sizing:border-box;
-                    position:relative;overflow:hidden;
+                    width:240px;height:100%;float:left; font-size:0;
+                    opacity:0.3; transition:0.5s;
+                    position:relative;
                     &:hover {
                         opacity:1;
                         .svgWrap svg rect {
@@ -265,7 +276,6 @@
                             right:-20px;
                         }
                     }
-    
                     a {            
                         display:block;     
                         width:95%;height:90%;
@@ -316,10 +326,8 @@
                     }
                     @for $i from 1 through 10 {
                         &:nth-of-type(#{$i}) >a{
-                        &::before{
-                            background: url(../img/loban#{$i}.jpg) no-repeat center/cover;
+                                background: url(../img/loban#{$i}.jpg) no-repeat center/cover;
                         }
-                    }
                     }
                     
                     .svgWrap {
@@ -382,19 +390,54 @@
             }
         }
         .bottomA {
-            position:absolute; left:50%; bottom:50px;transform: translateX(-50%);
+            position:absolute; left:50%; bottom:150px;transform: translateX(-50%);
             width:160px; height:40px; display: block;
             background:#d8681e;font:300 16px/40px "Cormorant Infant";
             color:#f2f2f2;text-align: center;
         }
     }
 }
+// ---------------tablet---------------
 @media screen and (max-width:1179px){
-    .location{
-        .inner{
-            width:100%; padding:0px 30px; box-sizing:border-box;
+    .location {
+        width:100%;height:3050px;
+        .sub_visual {
+            width:100%; height:300px;margin-bottom:60px;
+
+        }
+        .inner {
+            width:90%;height:2650px;
+            padding:150px 40px;
+            #loBanner {
+                bottom:240px;
+            }
+            .bottomA {
+                bottom:150px;
+            }
         }
     }
-    
-    
+}
+// -------mobile-------------
+@media screen and (max-width:539px){
+    .location {
+        width:100%;height:3150px;
+        .sub_visual {
+            margin:0px;
+            .visualH1 {
+                width:100%;
+                top:210px;
+            }
+            >p{
+                width:100%;
+                top:250px;
+            }
+        }
+        .inner {
+            width:80%;
+            min-width:400px;
+            top:280px;
+            padding:150px 40px;
+            height:2750px;
+        }
+    }
 }

@@ -21,14 +21,8 @@ window.onload = function(){
         map.setCenter(markerOptions[active_index].latlng);  
     });
     
-    // window.onresize = function(){   
-    //     var active_btn = document.querySelector(".branch li.on");
-    //     var active_index = parseInt(active_btn.getAttribute("data-index"))-1;
-    //     map.setCenter(markerOptions[active_index].latlng);
-    //  }
-    
     var drag = true; //드래그 가능
-    var zoom = true; //휠로 zoom가능
+    var zoom = false; //휠로 zoom가능
     
     //처음 보일 지도 위치 설정
     var mapOption = { 
@@ -95,19 +89,6 @@ window.onload = function(){
         t_off.classList.add("on");
         t_on.classList.remove("on");
     });
-    // t_on.onclick = function(){
-    //     map.removeOverlayMapTypeId(daum.maps.MapTypeId.TRAFFIC); 
-    //     map.addOverlayMapTypeId(daum.maps.MapTypeId.TRAFFIC);
-    //     t_off.classList.remove("on");
-    //     t_on.classList.add("on");
-    //     return false;
-    // }
-    // t_off.onclick = function(){
-    //     map.removeOverlayMapTypeId(daum.maps.MapTypeId.TRAFFIC); 
-    //     t_on.classList.remove("on");
-    //     t_off.classList.add("on")
-    //     return false;
-    // } 
     
     //마커옵션의 갯수만큼 반복을 돌며 지점 보기 버튼 이벤트 연결
     for(var i=0; i<markerOptions.length; i++){
@@ -157,6 +138,19 @@ window.onload = function(){
         map.setZoomable(zoomable);    
     }
     
+    var $map = $("#map");
+    var $showBox = $map.find(".showBox")
+    var $traffic = $map.find(".traffic")
+
+    $map.on("mouseenter",function(){
+        $showBox.css({"filter":"contrast(100%) grayscale(0)"});
+        $traffic.css({"filter":"contrast(100%) sepia(0%)"})
+    })
+    $map.on("mouseleave",function(){
+        $showBox.css({"filter":"contrast(50%)"});
+        $traffic.css({"filter":"contrast(70%) sepia(5%)"})
+
+    })
     
     
     

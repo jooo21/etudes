@@ -1,30 +1,30 @@
 $(document).ready(function(){
     //전역변수
-    var $banner = $("#loBanner");
-    var $list = $banner.find(".list");
-    var wid = $list.children("li").outerWidth();
-    var $prev = $banner.find(".prev");
-    var $next = $banner.find(".next");
+    var $loBanner = $("#loBanner");
+    var $list = $loBanner.find(".list");
+    var wid = $list.children("li").width();
+    var len = $list.children("li").length;
+    var total_wid = wid * len;
+    $list.css({width: total_wid, marginLeft:-i});
+    var $prev = $loBanner.find(".prev");
+    var $next = $loBanner.find(".next");
+
     var speed = 500;
     var i= -wid;
     var timer;
     var isDone = true;
-    var len = $list.children("li").length;
-    var total_wid = wid * len;
-    $list.css({width: total_wid, marginLeft: -wid});
-    
 
     //로딩시 자동롤링 시작
     timer = setInterval(move ,20);
 
     //마우스 오버 이벤트
-    $banner.on("mouseenter",function(){
+    $loBanner.on("mouseenter",function(){
         clearInterval(timer);
     });
 
     //마우스 아웃 이벤트
-    $banner.on("mouseleave",function(){
-        timer = setInterval(move ,20);
+    $loBanner.on("mouseleave",function(){
+       timer = setInterval(move ,20);
     });
 
     //next 버튼 이벤트
@@ -50,12 +50,12 @@ $(document).ready(function(){
     //롤링함수 정의
     function move(){
         if(i <= -wid*2){
-            i= -wid;
             $list.children("li").first().appendTo($list);
+            i= -wid;
         }else{
             i--;
         } 
-        $list.css({marginLeft : i});
+        $list.css({marginLeft : -wid});
     }
 
     //next함수정의
