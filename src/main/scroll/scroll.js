@@ -40,6 +40,11 @@ $(document).ready(function(){
     //현재 스크롤 위치값을 인수로 받아서
     //스크롤 값과 박스의 위치를 비교해서 해당하는 버튼만 활성화 시키는 함수
     function activateBtn(scroll){
+        if($(window).width() <539) { 
+            baseLine = 50;
+         }else{
+             baseLine = -400;
+         }
         for(var i=0; i<len; i++){
             if( scroll >= posArr[i] + baseLine){
                 $scrollbtns.find("a").removeClass("on");
@@ -57,6 +62,8 @@ $(document).ready(function(){
         var target = $(el).find("a").attr("href");
         var targetPos = $(target).offset().top; 
         $("html, body").stop().animate({ scrollTop : targetPos-200 },speed);
+
+        
     }
 
 
