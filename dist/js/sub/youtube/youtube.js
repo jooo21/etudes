@@ -14,22 +14,7 @@ $(document).ready(function(){
         playList :"PLaZXpj41N2i3pMtiMrPFqcDYIia5AhcaT"
     });
    
-    //리스트 썸네일 클릭시 팝업호출및 유튜브 영상호출
-    // $("body").on("click", ".swiper-slide .pic",function(e){
-    //     e.preventDefault();
-
-    //     var vidId = $(this).attr("href"); 
-
-    //     createPop({
-    //         width : "100%",
-    //         height : "100vh",
-    //         bg : "rgba(0,0,0,0.9)",
-    //         vidId : vidId
-    //     });
-
-    //     $("body").css({overflow:"hidden"});
-    // });
-
+    //리스트 버튼 클릭시 팝업호출및 유튜브 영상호출
     $("body").on("click", ".swiper-slide .pic_href",function(e){
         e.preventDefault();
 
@@ -86,7 +71,7 @@ $(document).ready(function(){
                 var len = p_txt.length;
                 var date = data.snippet.publishedAt.split("T")[0];
     
-                (len >100)? p_txt = p_txt.substr(0,100) +"..." : p_txt;
+                (len >100)? p_txt = p_txt.substr(0,45) +"..." : p_txt;
     
                 $(opt.target)
                     .append(
@@ -105,10 +90,7 @@ $(document).ready(function(){
                                                 $("<a class='pic_href'>")
                                             .attr({href:data.snippet.resourceId.videoId})
                                             .text("VIEW MORE")
-                                            ),
-                                            $("<span>").text(date) ,
-                                            $("<span>").text("0"+(index+1))
-                                            
+                                            )
                                         )
                                 )
                                          
@@ -143,26 +125,20 @@ $(document).ready(function(){
                 }
                 
                 });
-                $(".auto li").eq(0).on("click",function(){
-                    swiper.autoplay.start();
-                    $(".auto li").removeClass('on');
-                    $(this).addClass("on");
-                })
-                $(".auto li").eq(1).on("click",function(){
-                    swiper.autoplay.stop();
-                    $(".auto li").removeClass('on');
-                    $(this).addClass("on");
-                })
-                swiper.on("touchStart",function(){
-                    swiper.autoplay.stop();
-                    $(".auto li").removeClass('on');
-                    $(".auto li").eq(1).addClass("on");
-                })
-                // $(".swiper-slide-active .inner").on("mouseenter",function(){
-                //     swiper.autoplay.stop();
+                // $(".auto li").eq(0).on("click",function(){
+                //     // swiper.autoplay.start();
+                //     $(".auto li").removeClass('on');
+                //     $(this).addClass("on");
                 // })
-                // $(".swiper-slide-active").on("mouseleave",function(){
-                //     swiper.autoplay.start();
+                // $(".auto li").eq(1).on("click",function(){
+                //     // swiper.autoplay.stop();
+                //     $(".auto li").removeClass('on');
+                //     $(this).addClass("on");
+                // })
+                // swiper.on("touchStart",function(){
+                //     // swiper.autoplay.stop();
+                //     $(".auto li").removeClass('on');
+                //     $(".auto li").eq(1).addClass("on");
                 // })
             
         })
