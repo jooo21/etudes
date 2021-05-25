@@ -8,8 +8,8 @@ $(document).ready(function(){
  
          if( scroll >= pos2+base ){
              //기존 스크롤값에서 box2위치값을 뺴서 다시 0부터 시작되게 설정
-             //이때 해당값을 5배로 빨리 증가시킴
-             scroll = (scroll-(pos2+base))*5;
+             //이때 해당값을 4배로 빨리 증가시킴
+             scroll = (scroll-(pos2+base))*4;
  
              var result = 2820 - scroll;
             

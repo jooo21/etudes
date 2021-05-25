@@ -68,7 +68,7 @@
                 }
             }
             >p{
-                font:200 16px/1 "Cormorant Infant"; color:#777;
+                font:200 14px/1 "Cormorant Infant"; color:#777;
                 margin-bottom:80px;
             }
             >div {
@@ -98,10 +98,12 @@
                 }
                 em {
                     display: block;
-                    font:200 18px/1 "Cormorant Infant"; color:#d8681e;margin-bottom:20px;
+                    font:200 16px/1 "Cormorant Infant"; color:#d8681e;margin-bottom:20px;
                 }
                 p{
-                    font:200 18px/1 "Cormorant Infant"; color:#bbb;
+                    width:70%;padding-left:15%;
+                    text-align: center;
+                    font:200 14px/1 "Cormorant Infant"; color:#bbb;
                 }
             }
         }
@@ -109,8 +111,6 @@
             width: 100%; 
             position:relative;
             margin-bottom:160px;
-            padding:10px;
-            background:#aaa;
             .showBox {
                 width: 100%; 
                 height: 500px;
@@ -119,11 +119,6 @@
                 box-sizing:border-box;
                 filter:contrast(50%) grayscale(1);
             }
-            // &::after {
-            //             content:""; display:block;width:100%; height:60px;
-            //             position:absolute;left:0px;bottom:-60px;background:#948a7d;
-                        
-            //         }
             >span {
                 position:absolute; right:5px;bottom:15px;font:bold 20px/1px "Cormorant Infant"; color:#b9b2a86c;z-index:2;
             }
@@ -152,7 +147,7 @@
                 }
             }
             .branch {
-                width:100%;float: left;margin-bottom:5px;
+                width:100%;float: left;
                 li {
                     float: left;width:(100%/3);
                     a {

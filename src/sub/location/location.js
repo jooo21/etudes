@@ -26,7 +26,7 @@ window.onload = function(){
     
     //처음 보일 지도 위치 설정
     var mapOption = { 
-        center: new kakao.maps.LatLng(37.47928413031555,127.01180612287209), 
+        center: new kakao.maps.LatLng(37.56720412888648,127.00998345887412), 
         level: 4
     };
     
@@ -112,7 +112,7 @@ window.onload = function(){
                 document.querySelectorAll('.branchAdd li')[index].classList.add("on");
                 document.querySelectorAll('.info li')[index].classList.add("on");
                 moveTo(markerOptions[index].latlng);
-                console.log(index);
+                // console.log(index);
             });
         })(i);        
     }    

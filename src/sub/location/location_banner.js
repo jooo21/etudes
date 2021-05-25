@@ -50,12 +50,12 @@ $(document).ready(function(){
     //롤링함수 정의
     function move(){
         if(i <= -wid*2){
-            $list.children("li").first().appendTo($list);
             i= -wid;
+            $list.children("li").first().appendTo($list);
         }else{
             i--;
         } 
-        $list.css({marginLeft : -wid});
+        $list.css({marginLeft : i});
     }
 
     //next함수정의

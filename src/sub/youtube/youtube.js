@@ -111,8 +111,8 @@ $(document).ready(function(){
                     prevEl : ".swiper-button-prev"
                 },
                 autoplay: {
-                     delay: 3000
-                    //  disableOnInteraction: false
+                     delay: 3000,
+                     disableOnInteraction: false
                 },
                 effect:"coverflow",
                 coverflowEffect: {
@@ -123,23 +123,7 @@ $(document).ready(function(){
                     // 위의 효과들을 2배하고 싶을때 modifier:2를 주는 것.
                     slideShadows: false
                 }
-                
-                });
-                // $(".auto li").eq(0).on("click",function(){
-                //     // swiper.autoplay.start();
-                //     $(".auto li").removeClass('on');
-                //     $(this).addClass("on");
-                // })
-                // $(".auto li").eq(1).on("click",function(){
-                //     // swiper.autoplay.stop();
-                //     $(".auto li").removeClass('on');
-                //     $(this).addClass("on");
-                // })
-                // swiper.on("touchStart",function(){
-                //     // swiper.autoplay.stop();
-                //     $(".auto li").removeClass('on');
-                //     $(".auto li").eq(1).addClass("on");
-                // })
+            });
             
         })
         .error(function(err){
@@ -168,22 +152,21 @@ $(document).ready(function(){
                 (len > 50)? p_txt = p_txt.substr(0,50)+"..." : p_txt;
 
                 $(opt.target)
-                    .append(
-                        $("<li>").append(
-                            $("<div class='pic'>")
-                                .css({backgroundImage:"url("+data.snippet.thumbnails.high.url+")"})
-                                .append(
-                                    $("<a class='pic_href'>")
-                                        .attr({href:data.snippet.resourceId.videoId})
-                                        .text("click"),
-                                    $("<div class='con'>")
-                                        .append(
-                                            $("<h2>").text(data.snippet.title),
-                                        )
-                                    )
-                                )                    
-                            
-                    )
+                .append(
+                $("<li>").append(
+                    $("<div class='pic'>")
+                        .css({backgroundImage:"url("+data.snippet.thumbnails.high.url+")"})
+                        .append(
+                        $("<a class='pic_href'>")
+                            .attr({href:data.snippet.resourceId.videoId})
+                            .text("click"),
+                        $("<div class='con'>")
+                            .append(
+                                $("<h2>").text(data.snippet.title),
+                            )
+                        )
+                    )                    
+                )
             })
         })
         .error(function(err){
