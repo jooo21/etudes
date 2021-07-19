@@ -63,9 +63,6 @@ $(document).ready(function(){
 
         if(pwd1 === pwd2){           
             (pwd1.length >= len ) ? i++ : alert("비밀번호는 "+len+"자리 이상 입력하세요");
-            // (spc.test(pwd1)) ? i++ : alert("비밀번호에 특수문자를 포함하세요");
-            // (num.test(pwd1)) ? i++ : alert("비밀번호에 숫자를 포함하세요");
-            // (eng.test(pwd1)) ? i++ : alert("비밀번호에 문자를 포함하세요");  
 
             if(i!=4){               
                 $("input[name='"+name1+"']").addClass("error");
@@ -108,6 +105,5 @@ $(document).ready(function(){
             return true;
         }
     }
-
 
 });

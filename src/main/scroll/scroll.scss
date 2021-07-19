@@ -12,7 +12,6 @@
             display: block;
             width: 13px;
             height: 15px;
-           
             position:relative;
             &::after {
                 content:"";display:block;
@@ -38,6 +37,29 @@
                     opacity:1;
                 }
             }
+        }
+        
+    }
+}
+.topbtn {
+    position: fixed;
+    left: 15px;
+    top: 70%;
+    z-index: 3;
+    width:40px; height:40px;
+    background: #3a3a50;
+    // border-radius: 50%;
+    span{
+        font:300 12px/1 "Jost"; color:#ada699;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        transition: 0.5s;
+    }
+    &:hover {
+        span{
+           color:#fff
         }
     }
 }

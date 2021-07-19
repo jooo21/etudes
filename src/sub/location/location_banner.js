@@ -3,9 +3,7 @@ $(document).ready(function(){
     var $loBanner = $("#loBanner");
     var $list = $loBanner.find(".list");
     var wid = $list.children("li").width();
-    var len = $list.children("li").length;
-    var total_wid = wid * len;
-    $list.css({width: total_wid, marginLeft:-i});
+    
     var $prev = $loBanner.find(".prev");
     var $next = $loBanner.find(".next");
 
@@ -13,6 +11,9 @@ $(document).ready(function(){
     var i= -wid;
     var timer;
     var isDone = true;
+    var len = $list.children("li").length;
+    var total_wid = wid * len;
+    $list.css({width: total_wid, marginLeft: -wid});
 
     //로딩시 자동롤링 시작
     timer = setInterval(move ,20);

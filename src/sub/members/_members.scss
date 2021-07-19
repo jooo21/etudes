@@ -1,5 +1,5 @@
 .members {
-    width:100%; height:2200px;
+    width:100%; height:1800px;
 
     .sub_visual {
         width:100%; height:300px;position: relative;
@@ -30,7 +30,7 @@
          }
     }
     .inner {
-        width:1180px; height:1800px;
+        width:1180px; height:1500px;
         margin:0px auto;
         position: absolute;top:350px;left:50%; 
         transform:translateX(-50%);
@@ -69,7 +69,7 @@
         .left {
             float:left;width:30%;
             h1 {
-                font: 400 16px/1 'Noto Sans KR', sans-serif;color:#555;
+                font: 400 16px/1 'Noto Sans KR', sans-serif;color:#555;margin-bottom: 20px;
             }
             .checkbox_group{
                 p {

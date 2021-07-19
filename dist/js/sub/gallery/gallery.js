@@ -5,14 +5,14 @@ $(document).ready(function(){
     var key = '795ec68eff11550e1c52deed3a86011b';
     
     //브라우저 로딩시 Flickr 데이터 호출
-    getFlickr(url, key, 6);
+    getFlickr(url, key, 21);
 
     //리스트의 썸네일 클릭시
     $("body").on("click", "#gallery ul li a",function(e){
         e.preventDefault();
         var imgSrc = $(this).attr("href");
         var poptext = $(this).find("p").text();
-        console.log(poptext);
+        // console.log(poptext);
         createPop(imgSrc,poptext);
     });
 
@@ -68,7 +68,7 @@ $(document).ready(function(){
             }
         })
         .success(function(data){
-            console.log(data.photos.photo);
+            // console.log(data.photos.photo);
             var item = data.photos.photo;
             $("#gallery ul").empty();
 

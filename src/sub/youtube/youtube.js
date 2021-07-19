@@ -63,7 +63,7 @@ $(document).ready(function(){
             }
         })
         .success(function(data){
-            console.log(data.items);
+            // console.log(data.items);
             var item = data.items;
     
             $(item).each(function(index, data){
@@ -142,7 +142,7 @@ $(document).ready(function(){
             }
         })
         .success(function(data){
-            console.log(data.items);
+            // console.log(data.items);
             var item = data.items;
 
             $(item).each(function(index, data){
