@@ -316,7 +316,7 @@
                     }
                     @for $i from 1 through 10 {
                         &[data-index="#{$i}"] >a{
-                                background: url(../img/loban#{$i}.jpg) no-repeat center/cover;
+                                background: url(../img/loban#{$i}.JPG) no-repeat center/cover;
                         }
                     }
                     
