@@ -41,7 +41,7 @@ $(document).ready(function(){
         var isMedia = $(el).find("a").eq(0).text();
         
         if(isMedia ==="MEMBERS") {
-            $(el).find("video").get(0).pause();
+            $(el).find("video").get(0).load();
         }
 
         $(el).children(".sub").stop().hide();
