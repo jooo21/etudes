@@ -19,9 +19,9 @@ $(document).ready(function(){
         var bg = $sub.css("background-color");
         var posY = $header.outerHeight();
         var isBgGnb = $(".bgGnb").length;
-        var isMedia = $(el).children(".sub").find("a").eq(0).text();
-        if(isMedia =="Log in") {
-            $(el).children(".sub").find("video").get(0).play();
+        var isMedia = $(el).find("a").eq(0).text();
+        if(isMedia =="MEMBERS") {
+            $(el).find("video").get(0).play();
         }
         if(!isBgGnb) {     
             $header.prepend(
@@ -38,9 +38,10 @@ $(document).ready(function(){
     }
 
     function closeSub(el){
-        var isMedia = $(el).children(".sub").find("a").eq(0).text();
-        if(isMedia =="Log in") {
-            $(el).children(".sub").find("video").get(0).pause();
+        var isMedia = $(el).find("a").eq(0).text();
+        
+        if(isMedia ==="MEMBERS") {
+            $(el).find("video").get(0).pause();
         }
 
         $(el).children(".sub").stop().hide();
